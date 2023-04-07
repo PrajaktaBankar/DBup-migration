@@ -1,0 +1,89 @@
+﻿USE [SLCProject_SqlSlcOp004]
+GO
+
+UPDATE PSS SET PSS.ParentSegmentStatusId = 1360804415
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  
+and PSS.SegmentStatusId = 1028840946
+	  
+UPDATE PSS SET PSS.ParentSegmentStatusId = 1028840946
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.ParentSegmentStatusId = 954355929
+
+UPDATE PSS SET PSS.ParentSegmentStatusId = 1028840947
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.ParentSegmentStatusId = 954355931
+
+UPDATE PSS SET PSS.ParentSegmentStatusId = 1028840953
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.ParentSegmentStatusId = 954355936
+
+UPDATE PSS SET PSS.ParentSegmentStatusId = 1028840954
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.SegmentStatusId = 1028840955
+
+UPDATE PSS SET PSS.ParentSegmentStatusId = 1028840955
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.SegmentStatusId = 1028840956
+
+UPDATE PSS SET PSS.ParentSegmentStatusId = 1028840957
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.SegmentStatusId = 1028840958
+
+
+UPDATE PSS SET PSS.ParentSegmentStatusId = 1028840961
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.SegmentStatusId = 1028840980
+
+
+UPDATE PSS SET PSS.ParentSegmentStatusId = 1360265934
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.SegmentStatusId = 1028840962
+
+UPDATE PSS SET PSS.ParentSegmentStatusId = 1028840962
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.ParentSegmentStatusId = 954355949
+
+
+UPDATE PSS SET PSS.IndentLevel = 6
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.ParentSegmentStatusId = 1360804417
+
+UPDATE PSS SET PSS.IndentLevel = 5
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.ParentSegmentStatusId = 1360804416
+
+UPDATE PSS SET PSS.IndentLevel = 7
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.ParentSegmentStatusId = 1360804796
+
+UPDATE PSS SET PSS.IndentLevel = 7
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.ParentSegmentStatusId = 1360977802
+
+
+UPDATE PSS SET PSS.IndentLevel = 6
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.ParentSegmentStatusId = 1360977803
+
+
+UPDATE PSS SET PSS.IndentLevel = 7,PSS.ParentSegmentStatusId = 1360977803
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.ProjectId = 16425 AND PSS.SectionId = 20229249  AND
+PSS.SegmentStatusId IN(1360418561,1360418531,1360418538)
+
+

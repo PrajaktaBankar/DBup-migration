@@ -1,0 +1,254 @@
+
+--ProjectSegmentStatus
+
+CREATE NONCLUSTERED INDEX [CIX_ProjectSegmentStatus_BigInt_ProjectId_CustomerId] ON [dbo].[ProjectSegmentStatus]
+(
+	[ProjectId] ASC,
+	[CustomerId] ASC,
+	[SectionId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+CREATE NONCLUSTERED INDEX [CIX_ProjectSegmentStatus_BigInt_SectionId_ProjectId_CustomerId] ON [dbo].[ProjectSegmentStatus]
+(
+	[SectionId] ASC,
+	[ProjectId] ASC,
+	[CustomerId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+CREATE NONCLUSTERED INDEX [CIX_ProjectSegmentStatus_BigInt_SegmentId_SectionId] ON [dbo].[ProjectSegmentStatus]
+(
+	[ProjectId] ASC,
+	[CustomerId] ASC
+)
+INCLUDE([SegmentStatusId],[SectionId],[mSegmentId],[SegmentId]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+CREATE NONCLUSTERED INDEX [CIX_ProjectSegmentStatus_BigInt_UnArchive] ON [dbo].[ProjectSegmentStatus]
+(
+	[ProjectId] ASC,
+	[CustomerId] ASC,
+	[SectionId] ASC,
+	[SLE_DocID] ASC,
+	[SLE_ParentID] ASC
+)
+INCLUDE([ParentSegmentStatusId],[SegmentStatusId]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+
+
+
+--ProjectReferenceStandard
+
+CREATE NONCLUSTERED INDEX [IX_ProjectReferenceStandard_All_Required] ON [dbo].[ProjectReferenceStandard]
+(
+	[ProjectId] ASC,
+	[SectionId] ASC,
+	[CustomerId] ASC,
+	[IsDeleted] ASC,
+	[RefStdSource] ASC
+)
+INCLUDE([RefStandardId],[RefStdEditionId],[RefStdCode]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+
+
+
+
+--ProjectSegmentChoice
+
+CREATE NONCLUSTERED INDEX [CIX_ProjectSegmentChoice_SectionId_ProjectId_CustomerId] ON [dbo].[ProjectSegmentChoice]
+(
+	[SectionId] ASC,
+	[ProjectId] ASC,
+	[CustomerId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+
+CREATE NONCLUSTERED INDEX [CIX_ProjectSegmentChoice_UnArchive] ON [dbo].[ProjectSegmentChoice]
+(
+	[ProjectId] ASC,
+	[CustomerId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+
+CREATE NONCLUSTERED INDEX [NCIX_ProjectSegmentChoice] ON [dbo].[ProjectSegmentChoice]
+(
+	[SegmentChoiceId] ASC,
+	[SectionId] ASC
+)
+INCLUDE ( 	[SegmentStatusId],
+	[SegmentId],
+	[ProjectId],
+	[CustomerId]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+
+
+
+
+--ProjectSegment
+
+CREATE NONCLUSTERED INDEX [CIX_ProjectSegment_SegmentStatusId] ON [dbo].[ProjectSegment]
+(
+	[SegmentStatusId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+
+CREATE NONCLUSTERED INDEX [CIX_ProjectSegment_UnArchive] ON [dbo].[ProjectSegment]
+(
+	[ProjectId] ASC,
+	[CustomerId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+
+
+
+--ProjectSegmentRequirementTag
+
+CREATE NONCLUSTERED INDEX [IX_ProjectSegmentRequirementTag_SectionId_SegmentStatusId_ProjectId] ON [dbo].[ProjectSegmentRequirementTag]
+(
+	[SectionId] ASC,
+	[SegmentStatusId] ASC,
+	[ProjectId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+
+CREATE NONCLUSTERED INDEX [IX_PSRT_SegmentStatusId_RequirementTagId] ON [dbo].[ProjectSegmentRequirementTag]
+(
+	[SegmentStatusId] ASC,
+	[RequirementTagId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+
+
+
+
+
+--ProjectSegmentLink
+
+CREATE NONCLUSTERED INDEX [CIX_ProjectSegmentLink_UnArchive] ON [dbo].[ProjectSegmentLink]
+(
+	[ProjectId] ASC,
+	[CustomerId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+
+--ProjectChoiceOption
+
+CREATE NONCLUSTERED INDEX [CIX_ProjectChoiceOption_SegmentChoiceId] ON [dbo].[ProjectChoiceOption]
+(
+	[SegmentChoiceId] ASC
+)
+INCLUDE([ChoiceOptionCode]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+CREATE NONCLUSTERED INDEX [CIX_ProjectChoiceOption_ChoiceOptionCode] ON [dbo].[ProjectChoiceOption]
+(
+	[ChoiceOptionCode] ASC
+)
+INCLUDE([SegmentChoiceId]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+CREATE NONCLUSTERED INDEX [CIX_ProjectChoiceOption_UnArchive1] ON [dbo].[ProjectChoiceOption]
+(
+	[ProjectId] ASC,
+	[CustomerId] ASC
+)
+INCLUDE ( 	[ChoiceOptionCode]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+CREATE NONCLUSTERED INDEX [NCI_ProjectChoiceOption_ProjectId] ON [dbo].[ProjectChoiceOption]
+(
+	[ProjectId] ASC,
+	[SectionId] ASC,
+	[CustomerId] ASC
+)
+INCLUDE([SegmentChoiceId]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+
+
+
+--SelectedChoiceOption
+
+CREATE NONCLUSTERED INDEX [CSIx_SelectedChoiceOption_New_Include_Id] ON [dbo].[SelectedChoiceOption]
+(
+	[ChoiceOptionCode] ASC,
+	[ProjectId] ASC,
+	[CustomerId] ASC
+)
+INCLUDE ( 	[SegmentChoiceCode],
+	[ChoiceOptionSource],
+	[IsSelected]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+CREATE NONCLUSTERED INDEX [CIX_SelectedChoiceOption_New_ProjectId_CustomerId] ON [dbo].[SelectedChoiceOption]
+(
+	[SectionId] ASC,
+	[ProjectId] ASC,
+	[CustomerId] ASC
+)
+INCLUDE ( 	[ChoiceOptionCode],
+	[ChoiceOptionSource],
+	[IsDeleted]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+
+CREATE NONCLUSTERED INDEX [CIX_SelectedChoiceOption_New_UnArchive] ON [dbo].[SelectedChoiceOption]
+(
+	[ProjectId] ASC,
+	[CustomerId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+
+
+--Other Depenedent tables
+
+
+--Create Index
+CREATE NONCLUSTERED INDEX [IX_ProjectSegmentGlobalTerm_SegmentId_GlobalTermCode] ON [dbo].[ProjectSegmentGlobalTerm]
+(
+	[SectionId] ASC,
+	[ProjectId] ASC,
+	[SegmentId] ASC,
+	[GlobalTermCode] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+
+CREATE NONCLUSTERED INDEX [IX_ProjectSegmentImage_LuImageSourceTypeId_SegmentId] ON [dbo].[ProjectSegmentImage]
+(
+	[SectionId] ASC,
+	[ProjectId] ASC,
+	[SegmentId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+
+CREATE NONCLUSTERED INDEX [NCI_ProjectId_SegmentId_RefStdCode] ON [dbo].[ProjectSegmentReferenceStandard]
+(
+	[SegmentId] DESC,
+	[ProjectId] DESC,
+	[RefStdCode] DESC,
+	[SectionId] DESC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+
+CREATE NONCLUSTERED INDEX [CIX_TrackSegmentStatusType_SegmentStatusId] ON [dbo].[TrackSegmentStatusType]
+(
+	[SegmentStatusId] DESC,
+	[SectionId] DESC,
+	[ProjectId] DESC
+)
+INCLUDE([IsAccepted]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO

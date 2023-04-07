@@ -1,0 +1,31 @@
+truncate table [dbo].LuDateFormat
+DBCC CHECKIDENT('LuDateFormat', RESEED, 0)
+
+SET IDENTITY_INSERT [dbo].[LuDateFormat] ON 
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (1, N'M-d-yyyy', 1, 1, 0, N'M-d-yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (2, N'MM-dd-yyyy', 2, 1, 0, N'MM-dd-yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (3, N'MMM-d-yyyy', 3, 1, 0, N'MMM-d-yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (4, N'MMM-dd-yyyy', 4, 1, 0, N'MMM-dd-yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (5, N'd-M-yyyy', 5, 1, 0, N'd-M-yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (6, N'dd-MM-yyyy', 6, 1, 0, N'dd-MM-yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (7, N'd-MMM-yyyy', 7, 1, 0, N'd-MMM-yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (8, N'dd-MMM-yyyy', 8, 1, 0, N'dd-MMM-yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (9, N'yyyy-M-d', 9, 1, 0, N'yyyy-M-d')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (10, N'yyyy-MM-dd', 10, 1, 0, N'yyyy-MM-dd')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (11, N'yyyy-MMM-d', 11, 1, 0, N'yyyy-MMM-d')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (12, N'yyyy-MMM-dd', 12, 1, 0, N'yyyy-MMM-dd')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (13, N'M/d/yyyy', 13, 1, 0, N'M/d/yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (14, N'MM/dd/yyyy', 14, 1, 0, N'MM/dd/yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (15, N'MMM/d/yyyy', 15, 1, 0, N'MMM/d/yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (16, N'MMM/dd/yyyy', 16, 1, 0, N'MMM/dd/yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (17, N'd/M/yyyy', 17, 1, 0, N'd/M/yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (18, N'dd/MM/yyyy', 18, 1, 0, N'dd/MM/yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (19, N'd/MMM/yyyy', 19, 1, 0, N'd/MMM/yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (20, N'dd/MMM/yyyy', 20, 1, 0, N'dd/MMM/yyyy')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (21, N'yyyy/M/d', 21, 1, 0, N'yyyy/M/d')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (22, N'yyyy/MM/dd', 22, 1, 0, N'yyyy/MM/dd')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (23, N'yyyy/MMM/d', 23, 1, 0, N'yyyy/MMM/d')
+INSERT [dbo].[LuDateFormat] ([DateFormatId], [DateFormat], [SortOrder], [IsActive], [IsDeleted], [DisplayName]) VALUES (24, N'yyyy/MMM/dd', 24, 1, 0, N'yyyy/MMM/dd')
+SET IDENTITY_INSERT [dbo].[LuDateFormat] OFF
+
+DBCC CHECKIDENT('LuDateFormat', RESEED, 24)

@@ -1,0 +1,28 @@
+use SLCProject_SqlSlcOp003
+go
+
+declare @FixImage int = 1
+
+select '<img id="' + cast(pimg.ImageId as nvarchar(max))+ '" src="https://slc-api.bsdspeclink.com/SegmentImages/' + pimg.ImagePath +'" />' as ImageSegmentDescription, * from dbo.ProjectSegment pseg (nolock)
+inner join dbo.ProjectSegmentImage  psi on pseg.CustomerId=psi.CustomerId 
+										and pseg.ProjectId=psi.ProjectId 
+										and pseg.SectionId=psi.SectionId 
+										and pseg.SegmentId=psi.SegmentId
+inner join dbo.ProjectImage pimg on pimg.ImageId=psi.ImageId
+where psi.CustomerId=905 
+	--and psi.ProjectId=9252 --and psi.SegmentId=105221754
+
+if (@FixImage=1)
+begin
+	Update pseg set pseg.SegmentDescription = '<img id="' + cast(pimg.ImageId as nvarchar(max))+ '" src="https://slc-api.bsdspeclink.com/SegmentImages/' + pimg.ImagePath +'" />'
+	--select '<img id="' + cast(pimg.ImageId as nvarchar(max))+ '" src="https://slc-api.bsdspeclink.com/SegmentImages/' + pimg.ImagePath +'" />' as ImageSegmentDescription, * from dbo.ProjectSegment pseg (nolock)
+	from dbo.ProjectSegment pseg (nolock)
+	inner join dbo.ProjectSegmentImage  psi on pseg.CustomerId=psi.CustomerId 
+											and pseg.ProjectId=psi.ProjectId 
+											and pseg.SectionId=psi.SectionId 
+											and pseg.SegmentId=psi.SegmentId
+	inner join dbo.ProjectImage pimg on pimg.ImageId=psi.ImageId
+	where psi.CustomerId=905 
+
+	Print 'Image Fixed'
+end

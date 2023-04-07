@@ -1,0 +1,8 @@
+USE [SLCProject]
+GO
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'ProjectPrintSetting' AND COLUMN_NAME = 'AttachSuppDocAtTheEnd')
+BEGIN
+	ALTER TABLE ProjectPrintSetting
+	ADD AttachSuppDocAtTheEnd BIT
+END;

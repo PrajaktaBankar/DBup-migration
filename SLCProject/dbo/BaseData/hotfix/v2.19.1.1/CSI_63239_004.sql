@@ -1,0 +1,7 @@
+﻿--Customer Support 63239: SLC - Unable to Adjust Line Spacing in Template to Match Client's Spacing Requirements
+-- _SqlSlcOp004
+USE SLCProject
+GO
+
+DELETE FROM TemplateStyle WHERE TemplateStyleId IN (
+14514,14515,14516,14517,14518,14519,14520,14521,14522,14802,14803,14804,14805,14806,14807,14808,14809,14810,15090,15091,15092,15093,15094,15095,15096,15097,15098)

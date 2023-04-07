@@ -1,0 +1,1 @@
+USE SLCProjectALTER TABLE ProjectPrintSetting ADD KeepWithNext BIT DEFAULT  1 NOT NULL ;

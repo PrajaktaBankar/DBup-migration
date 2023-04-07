@@ -1,0 +1,8 @@
+USE [SLCProject]
+GO
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'ProjectSection' AND COLUMN_NAME = 'PendingUpdateCount')
+BEGIN
+	ALTER TABLE ProjectSection
+	ADD PendingUpdateCount INT
+END;

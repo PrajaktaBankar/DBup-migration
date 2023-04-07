@@ -1,0 +1,35 @@
+	USE [SLCProject_SqlSlcOp002]
+	GO
+    
+	UPDATE PSS  SET PSS.SequenceNumber =  498 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629830238
+	UPDATE PSS  SET PSS.SequenceNumber =  469 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828335
+	UPDATE PSS  SET PSS.SequenceNumber =  470 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828336
+	UPDATE PSS  SET PSS.SequenceNumber =  471 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828337
+	UPDATE PSS  SET PSS.SequenceNumber =  472 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828338
+	UPDATE PSS  SET PSS.SequenceNumber =  473 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828339
+	UPDATE PSS  SET PSS.SequenceNumber =  474 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828340
+	UPDATE PSS  SET PSS.SequenceNumber =  475 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828341
+	UPDATE PSS  SET PSS.SequenceNumber =  476 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828342
+	UPDATE PSS  SET PSS.SequenceNumber =  477 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828343
+	UPDATE PSS  SET PSS.SequenceNumber =  478 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828344
+	UPDATE PSS  SET PSS.SequenceNumber =  499 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629830239
+	UPDATE PSS  SET PSS.SequenceNumber =  479 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828345
+	UPDATE PSS  SET PSS.SequenceNumber =  480 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828346
+	UPDATE PSS  SET PSS.SequenceNumber =  481 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828347
+	UPDATE PSS  SET PSS.SequenceNumber =  482 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828348
+	UPDATE PSS  SET PSS.SequenceNumber =  483 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828349
+	UPDATE PSS  SET PSS.SequenceNumber =  484 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828350
+	UPDATE PSS  SET PSS.SequenceNumber =  485 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828351
+	UPDATE PSS  SET PSS.SequenceNumber =  486 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828352
+	UPDATE PSS  SET PSS.SequenceNumber =  487 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828353
+	UPDATE PSS  SET PSS.SequenceNumber =  488 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828354
+	UPDATE PSS  SET PSS.SequenceNumber =  500 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629830240
+	UPDATE PSS  SET PSS.SequenceNumber =  489 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828355
+	UPDATE PSS  SET PSS.SequenceNumber =  490 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828356
+	UPDATE PSS  SET PSS.SequenceNumber =  491 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828357
+	UPDATE PSS  SET PSS.SequenceNumber =  492 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828358
+	UPDATE PSS  SET PSS.SequenceNumber =  493 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828359
+	UPDATE PSS  SET PSS.SequenceNumber =  494 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828360
+	UPDATE PSS  SET PSS.SequenceNumber =  495 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828361
+	UPDATE PSS  SET PSS.SequenceNumber =  496 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828362
+	UPDATE PSS  SET PSS.SequenceNumber =  497 FROM ProjectSegmentStatus PSS With(Nolock) where PSS.ProjectId = 10979 AND PSS.SectionId = 13285120 And PSS.SegmentStatusId=629828363

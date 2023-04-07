@@ -1,0 +1,5 @@
+﻿USE [SLCProject]
+GO
+
+ALTER TABLE [dbo].[ProjectImage] ADD [SLE_GUID] NVARCHAR(100) NULL
+GO

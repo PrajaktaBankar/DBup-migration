@@ -1,0 +1,21 @@
+﻿USE [SLCProject_SqlSlcOp004]
+go
+
+Update PSS SET PSS.IndentLevel = 4
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+Where PSS.SegmentStatusId = 1279774020
+
+Update PSS SET PSS.ParentSegmentStatusId = 1494871508
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.SegmentStatusId IN(1279774017,
+1279774018,
+1279774019,1279774020) AND SectionId = 24238919
+
+Update PSS SET PSS.ParentSegmentStatusId = 1279774020
+FROM ProjectSegmentStatus PSS WITH(NOLOCK)
+WHERE PSS.SegmentStatusId IN(1279774023
+,1279774360
+,1279774361
+,1279774021
+,1279774022)
+AND SectionId = 24238919

@@ -1,0 +1,4 @@
+﻿USE SLCProject
+GO
+ALTER TABLE ImportProjectRequest
+ADD IsDeleted BIT NOT NULL DEFAULT 0	

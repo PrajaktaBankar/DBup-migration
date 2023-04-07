@@ -1,0 +1,1 @@
+﻿ALTER TABLE ProjectSection ALTER COLUMN SourceTag VARCHAR(18)

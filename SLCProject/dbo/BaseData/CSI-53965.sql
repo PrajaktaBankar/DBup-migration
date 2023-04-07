@@ -1,0 +1,4 @@
+﻿--Execute on server 3
+--Customer Support 53965: SLC font height
+ UPDATE PS SET SegmentDescription='<span>Touchup Painting: Wire brushing, cleaning, and repair painting of rust spots, welds, and abraded areas of both deck surfaces are included in Section {CH#10000340} and Section {CH#10000341}.</span>' FROM ProjectSegment PS WITH (NOLOCK) WHERE  ProjectId=10756 and SegmentStatusId=619097903
+ UPDATE PS SET SegmentDescription='<span>Prepare and repair damaged galvanized coatings on {CH#10000339} surfaces of {CH#10000338} with galvanized repair paint according to  {RS#514} and manufacturer&#x0027;s written instructions.</span>' FROM ProjectSegment PS WITH (NOLOCK) WHERE  ProjectId=10756 and SegmentStatusId=619104913

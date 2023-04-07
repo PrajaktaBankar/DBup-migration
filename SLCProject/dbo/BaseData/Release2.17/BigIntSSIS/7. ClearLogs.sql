@@ -1,0 +1,7 @@
+﻿Use SLCProject
+GO
+
+DBCC SHRINKFILE (SLCProject_log, 1)
+GO
+ALTER DATABASE SLCProject
+SET RECOVERY FULL

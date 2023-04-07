@@ -1,0 +1,7 @@
+﻿CREATE SEQUENCE [dbo].[seq_ProjectSegmentStatus]
+    AS BIGINT
+    START WITH 10041487
+    INCREMENT BY 1
+    MINVALUE 1
+    NO CACHE;
+

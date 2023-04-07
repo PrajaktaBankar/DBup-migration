@@ -1,0 +1,7 @@
+﻿CREATE SEQUENCE [dbo].[seq_ProjectGlobalTerm]
+    AS BIGINT
+    START WITH 10000252
+    INCREMENT BY 1
+    MINVALUE 1
+    NO CACHE;
+

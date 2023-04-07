@@ -1,0 +1,2 @@
+﻿ALTER TABLE PrintRequestDetails
+ADD IsDeleted BIT NOT NULL DEFAULT(0)

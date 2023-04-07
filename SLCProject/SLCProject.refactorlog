@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="fff30724-8db6-4ad6-b145-6c614646a0d1" ChangeDateTime="12/19/2019 11:00:40">
+    <Property Name="ElementName" Value="[dbo].[LuTitleFormat].[TitleFormatId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[LuTitleFormat]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PrintRequestId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a419a998-e9a3-4cbd-958a-12fd85d0448b" ChangeDateTime="12/19/2019 11:00:47">
+    <Property Name="ElementName" Value="[dbo].[LuTitleFormat].[Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[LuTitleFormat]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FileName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a57f24d6-27df-49a0-be27-d529b6cdcde5" ChangeDateTime="12/19/2019 11:00:57">
+    <Property Name="ElementName" Value="[dbo].[LuTitleFormat].[IsActive]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[LuTitleFormat]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CustomerId" />
+  </Operation>
+</Operations>

@@ -1,0 +1,16 @@
+.vs/SLCProject/v15/.suo
+<<<<<<< HEAD
+SLCProject/obj/Debug/SLCProject.sqlprojAssemblyReference.cache
+SLCProject/SLCProject.jfm
+SLCProject/SLCProject.dbmdl
+=======
+/SLCProject/bin/Debug
+>>>>>>> 6b196db6ea53340f26dc49e92c92cbedccfc8cc4
+/SLCProject/obj/Debug
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/.vs/SLC-Project/v15/.suo
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite-journal
+/.vs/database-slcproject/v15/.suo
+/.vs
